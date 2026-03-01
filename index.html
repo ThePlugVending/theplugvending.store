@@ -890,4 +890,15 @@
   // Nav scroll effect
   window.addEventListener('scroll', () => {
     document.querySelector('nav').style.boxShadow =
-      window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,0.08)'
+      window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none';
+  });
+
+  // Contact form submission
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
