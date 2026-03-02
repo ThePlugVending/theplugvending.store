@@ -455,7 +455,7 @@
   .products-section { padding: 100px 5vw; max-width: 1200px; margin: 0 auto; }
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 0;
   }
@@ -612,57 +612,6 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
 
-  /* ── IN THE WILD GALLERY ─────────────────── */
-  .gallery-section {
-    background: var(--dark);
-    padding: 100px 5vw;
-    overflow: hidden;
-  }
-  .gallery-header {
-    max-width: 1200px;
-    margin: 0 auto 60px;
-  }
-  .gallery-section .section-eyebrow { color: var(--orange); }
-  .gallery-section .section-title { color: white; }
-  .gallery-section .section-sub { color: rgba(255,255,255,0.5); }
-  .gallery-grid {
-    display: grid;
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 280px 280px;
-    gap: 12px;
-  }
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: var(--dark2);
-  }
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-    display: block;
-  }
-  .gallery-item:hover img { transform: scale(1.05); }
-  .gallery-item--tall { grid-row: 1 / 3; }
-  .gallery-caption {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 20px 18px 16px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.75));
-    color: rgba(255,255,255,0.85);
-    font-size: 11px;
-    font-family: 'DM Mono', monospace;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .gallery-item:hover .gallery-caption { opacity: 1; }
-
   /* ── RESPONSIVE ──────────────────────────── */
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; text-align: center; }
@@ -679,25 +628,9 @@
     .nav-links { display: none; }
     footer { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; }
-    .gallery-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 220px 220px 220px;
-    }
-    .gallery-item--tall {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
-    }
   }
   @media (max-width: 560px) {
     .products-grid { grid-template-columns: 1fr; }
-    .gallery-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 240px);
-    }
-    .gallery-item--tall {
-      grid-column: 1;
-      grid-row: 1 / 2;
-    }
   }
 </style>
 </head>
@@ -710,7 +643,6 @@
     <li><a href="#how">How It Works</a></li>
     <li><a href="#why">Why The Plug</a></li>
     <li><a href="#products">Products</a></li>
-    <li><a href="#gallery">Photos</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
 </nav>
@@ -791,7 +723,7 @@
         <span class="step-num">03</span>
         <span class="step-icon">💰</span>
         <div class="step-title">You Get Paid Monthly</div>
-        <p class="step-desc">Every sale the machine makes, you earn 10% automatically. We pay you monthly. Most busy bars see $200–$400 extra per month, passively.</p>
+        <p class="step-desc">Every sale the machine makes, you earn 10% automatically. We pay you monthly. Busy bars earn meaningful passive revenue every month, automatically.</p>
       </div>
     </div>
   </div>
@@ -837,8 +769,7 @@
     </div>
     <div class="why-card reveal">
       <div class="why-card-badge">Typical Venue Earnings</div>
-      <div class="why-card-num">$400</div>
-      <div class="why-card-label">Per Month · Busy Nights</div>
+      <div class="why-card-label">Passive Monthly Revenue</div>
       <div class="why-card-divider"></div>
       <div class="why-card-stat">
         <span>Your cost</span>
@@ -858,7 +789,7 @@
       </div>
       <div class="why-card-stat">
         <span>Footprint</span>
-        <span>~18 inches wide</span>
+        <span>24 × 40 inches</span>
       </div>
       <div class="why-card-divider"></div>
       <a href="#contact" class="btn-primary" style="display:block; text-align:center; margin-top:4px; text-decoration:none;">
@@ -892,37 +823,11 @@
       <p class="product-desc">Premium alternative pouch brands at competitive price points — great value for guests.</p>
       <span class="product-tag">Value Option</span>
     </div>
-  </div>
-</section>
-
-<!-- IN THE WILD -->
-<section class="gallery-section" id="gallery">
-  <div class="gallery-header">
-    <span class="section-eyebrow reveal">In the Wild</span>
-    <h2 class="section-title reveal">The Machine in Action</h2>
-    <p class="section-sub reveal">Placed in venues across the UK — stocked, managed, and running 24/7.</p>
-  </div>
-  <div class="gallery-grid">
-    <!-- Replace src attributes below with your actual bar photos -->
-    <div class="gallery-item gallery-item--tall reveal">
-      <img src="https://placehold.co/600x572/1a1a22/f6925a?font=poppins&text=Add+your+photo" alt="The Plug vending machine in a busy bar" loading="lazy">
-      <div class="gallery-caption">The Plug — busy Friday night</div>
-    </div>
-    <div class="gallery-item reveal reveal-delay-1">
-      <img src="https://placehold.co/400x280/1a1a22/f6925a?font=poppins&text=Add+your+photo" alt="Vending machine in bar venue" loading="lazy">
-      <div class="gallery-caption">Late night essentials</div>
-    </div>
-    <div class="gallery-item reveal reveal-delay-2">
-      <img src="https://placehold.co/400x280/1a1a22/f6925a?font=poppins&text=Add+your+photo" alt="Bar venue installation" loading="lazy">
-      <div class="gallery-caption">Seamlessly integrated</div>
-    </div>
-    <div class="gallery-item reveal reveal-delay-1">
-      <img src="https://placehold.co/400x280/1a1a22/f6925a?font=poppins&text=Add+your+photo" alt="Customers using vending machine" loading="lazy">
-      <div class="gallery-caption">Zero friction for your guests</div>
-    </div>
-    <div class="gallery-item reveal reveal-delay-2">
-      <img src="https://placehold.co/400x280/1a1a22/f6925a?font=poppins&text=Add+your+photo" alt="Machine stocked with products" loading="lazy">
-      <div class="gallery-caption">Always stocked, always ready</div>
+    <div class="product-card reveal reveal-delay-1">
+      <span class="product-emoji">🌙</span>
+      <div class="product-name">Nightlife Essentials</div>
+      <p class="product-desc">Disposable cameras, Advil, mints, chapstick, and other late-night must-haves guests actually reach for.</p>
+      <span class="product-tag">New</span>
     </div>
   </div>
 </section>
